@@ -1,0 +1,5 @@
+{
+  "name": "oh-my-crash",
+  "description": "A customizable Windows 11 Green Screen of Death (GSOD) and BSOD simulator with presets.",
+  "requestFramePermissions": []
+}
