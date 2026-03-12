@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Oh My Crash
 
-# Run and deploy your AI Studio app
+A customizable crash screen simulator for pranks and demonstrations.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/033f397e-5db7-4210-b7c9-f13ffc5678d7
+- Customizable appearance (colors, emoticons, fonts)
+- Configurable error messages and stop codes
+- Auto-incrementing progress bar
+- QR code display option
+- Automatic fullscreen on crash
+- Press Esc to exit
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+
+## Usage
+
+1. Configure your crash screen using the settings panel
+2. Choose from preset templates or create custom configurations
+3. Click "Trigger Crash" to start the simulation
+4. Click anywhere or press Esc to exit
+
+## License
+
+MIT

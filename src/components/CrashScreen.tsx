@@ -34,7 +34,24 @@ export default function CrashScreen({ config, onExit }: CrashScreenProps) {
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+
+    const requestFullScreen = () => {
+      try {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        }
+      } catch (err) {
+        console.log('Fullscreen request failed:', err);
+      }
+    };
+    requestFullScreen();
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+    };
   }, [onExit]);
 
   return (
@@ -47,7 +64,6 @@ export default function CrashScreen({ config, onExit }: CrashScreenProps) {
         paddingRight: '15%',
       }}
       onClick={onExit}
-      title="Click anywhere or press Esc to exit"
     >
       <div className="max-w-4xl w-full">
         <div className="text-[120px] leading-none font-light mb-8">
